@@ -1,3 +1,3 @@
-module go_sandbox
+module go
 
 go 1.24.4
