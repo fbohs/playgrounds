@@ -1,0 +1,125 @@
+# ============================================================
+# ROOT .gitignore — covers all sub-projects in this monorepo
+# ============================================================
+
+# ─── Node.js / npm / yarn / pnpm ───────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+.npm/
+.yarn/
+.pnp.*
+dist/
+build/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+*.tsbuildinfo
+
+# ─── Go ────────────────────────────────────────────────────
+# Compiled binaries (any name, no extension on *nix; .exe on Windows)
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+# Test & coverage output
+*.test
+*.out
+# Go workspace / vendor
+vendor/
+go.sum
+
+# ─── Python ────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.env/
+pip-wheel-metadata/
+
+# Distribution / packaging
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+MANIFEST
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+
+# mypy / pyright
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ─── Ruby / Bundler (React Native iOS) ─────────────────────
+.bundle/
+vendor/bundle/
+*.gem
+.ruby-version
+
+# ─── Environment / Secrets ─────────────────────────────────
+.env
+.env.*
+!.env.example
+!env.example
+*.pem
+*.key
+*.cert
+
+# ─── macOS ─────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# ─── JetBrains IDEs ────────────────────────────────────────
+.idea/
+*.iml
+*.iws
+
+# ─── VS Code ───────────────────────────────────────────────
+.vscode/
+
+# ─── Prisma generated client ───────────────────────────────
+src/generated/
+# Also catch the engine binaries directly
+*.node
+
+# ─── Docker ────────────────────────────────────────────────
+# (keep docker-compose files; only ignore generated artefacts)
+.docker/
+
+# ─── Logs & temp files ─────────────────────────────────────
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+jmeter/dashboard/
