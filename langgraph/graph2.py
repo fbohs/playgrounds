@@ -12,22 +12,23 @@ class MyCustomState(TypedDict):
     result: str | None
 
 
-def llm_node(current_state: MyCustomState) -> MyCustomState:
-    temp_state = current_state
-    print(temp_state)
+def llm_node(state: MyCustomState) -> dict:
+    values = state["values"]
+    op = state["operation"]
+    name = state["name"]
 
-    if temp_state["operation"] == "+":
-        temp_state["result"] = str(sum(temp_state["values"]))
-    elif temp_state["operation"] == "-":
-        temp_state["result"] = str(reduce(lambda x, y: x - y, temp_state["values"]))
-    elif temp_state["operation"] == "*":
-        temp_state["result"] = str(math.prod(temp_state["values"]))
-    elif temp_state["operation"] == "/":
-        temp_state["result"] = str(reduce(lambda x, y: x / y, temp_state["values"]))
+    if op == "+":
+        temp = str(sum(values))
+    elif op == "-":
+        temp = str(reduce(lambda x, y: x - y, values))
+    elif op == "*":
+        temp = str(math.prod(values))
+    elif op == "/":
+        temp = str(reduce(lambda x, y: x / y, values))
     else:
-        temp_state["result"] = "Unknown operation"
+        temp = "Unknown operation"
 
-    return temp_state
+    return {"result": f"Hi {name}, your result is {temp}"}
 
 
 graph = StateGraph(MyCustomState)
@@ -38,7 +39,7 @@ app = graph.compile()
 
 result = app.invoke(
     {
-        "name": "John",
+        "name": "Madhu",
         "values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
         "operation": "*",
     }
