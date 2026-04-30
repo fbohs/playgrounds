@@ -123,3 +123,7 @@ src/generated/
 *.swo
 *~
 jmeter/dashboard/
+
+# ─── Graphs ───────────────────────────────────────────────
+*.png
+*.svg
