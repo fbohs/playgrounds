@@ -4,7 +4,7 @@ from langchain_openai import ChatOpenAI
 llm = ChatOpenAI(
     base_url="http://localhost:1234/v1",
     api_key="lm-studio",  # LM Studio doesn't validate this
-    model="qwen/qwen3-coder-30b",
+    model="llama3.2:3b",
     temperature=0.7,
 )
 

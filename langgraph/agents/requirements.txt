@@ -1,0 +1,4 @@
+langgraph
+ipython
+langchain
+langchain_ollama

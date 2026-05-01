@@ -2,7 +2,6 @@ from langgraph.graph import StateGraph, START, END
 from typing import TypedDict, List
 import math
 from functools import reduce
-# from IPython.display import Image
 
 
 class MyCustomState(TypedDict):
@@ -46,6 +45,8 @@ result = app.invoke(
 )
 
 print(result)
+
+# from IPython.display import Image
 
 # with open("graph2.png", "wb") as f:
 #     f.write(app.get_graph().draw_mermaid_png())

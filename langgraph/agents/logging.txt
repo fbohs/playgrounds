@@ -1,0 +1,11 @@
+Your Conversation Log:
+You: hi
+AI: Hi there! How can I help you today?
+
+You: my name is madhu
+AI: Hello Madhu! Nice to meet you! How can I assist you today?
+
+You: whats my name
+AI: Your name is Madhu! You told me that earlier when you said "my name is madhu." Is there something specific you'd like to talk about or any questions you have?
+
+End of Conversation
